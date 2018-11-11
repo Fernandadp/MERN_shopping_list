@@ -1,0 +1,13 @@
+ -In package.json :
+ "scripts": nodemon is created to be able to see changes without having to restart the 
+ server everytime I make a server side change.
+ -In server.js: 
+  + express is the backend framework.
+  + mongoose is the orm to interact with de DB.
+  + bodyParser gets and pushes requests
+- Initialize express into a variable called App.
+- Create a DB on mLAb and then bring it into the werver.js file.
+- Connect to Mongo using Mongoose (mongoose.connect(db)). This is promise based, 
+so we use .then to send a message once the db is connected.
+- If there is an erro, .catch will send a message.
+- const port = variable for the port (Heroku process.env.PORT) or port 5000.
