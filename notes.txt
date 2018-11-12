@@ -11,3 +11,21 @@
 so we use .then to send a message once the db is connected.
 - If there is an erro, .catch will send a message.
 - const port = variable for the port (Heroku process.env.PORT) or port 5000.
+- To run nodemon, go to the console and type "npm run server", 
+because in our package.json we created a script "server" which runs nodemon (to be able to 
+continuosly watch the server).
+- API, we want to be able to get requests from our front-end and fetch and post 
+items from and to our DB and to delete them.
+- When using Mongoose is good to have a model. It contains an Item, and first
+we need to bring Mongoose into it.
+
+
+Front-end
+- Create client folder, where the front end will go.
+- cd into this client folder.
+- excute create-react-app . (with the .)
+- a new Package json will be created, which is totally different from the previous one, as this
+takes care of the front end (the other one does on the back end).
+- In package json we need to define a proxy element, so that we don't need to write 
+the whole address when acessing the app. This proxy will be our Back end server 
+(http://localhost:5000) 
