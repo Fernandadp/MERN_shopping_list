@@ -28,4 +28,16 @@ Front-end
 takes care of the front end (the other one does on the back end).
 - In package json we need to define a proxy element, so that we don't need to write 
 the whole address when acessing the app. This proxy will be our Back end server 
-(http://localhost:5000) 
+(http://localhost:5000)
+- To be able to run both servers (front and back ends) simultaneously, without having
+to use two comman lines, we will use Concurrently.
+- Go back to the main folder in the terminal.   
+- Open the back end's package json file, and check if Concurrently is already installed.
+If is not there (under dependencies), run 'npm install Concurrently'.
+- On the back end' package json, add a script "client": "npm start --prefix client"
+(anothe option is to write "cd client && npm start" ). This will run the client side server.
+- Then add another script, "dev", which will run both front and back end servers.
+("dev": "concurrently \"npm run server\" \"npm run client\""). To use this on the terminal:
+"npm run dev"
+- Add another script "client-install": "npm install --prefix client" (?).
+- To start both servers, on the terminal -> "npm run dev".
